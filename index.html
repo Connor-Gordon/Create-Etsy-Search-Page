@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="styles.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<title>Document</title>
+</head>
+<body>
+	
+	<!-- Main Container -->
+
+	<div id="mainContainer">
+	
+		<!-- Top bar with search and sign in -->
+
+		<section class="section" id="topBar">
+			<ul class="list" id="topBarList">
+				<div class="needToFlex">
+					<li id="etsyLogo">
+						<a href="https://etsy.com" target="_blank"><img src="file:///Users/connorgordon/PC/Create-Etsy-Search-Page/assets/etsylogo.20170615210938.png"/></a>
+					</li>
+					<li>
+						<div id="searchBar">
+							<input type="text" name="searchInput" id="searchInput" placeholder="Search for items or shops">
+							<button type="submit" id="searchButton">Search</button>
+						</div>
+					</li>
+				</div>
+				<div class="needToFlex">
+					<li id="etsyOptions">
+						<a href="https://www.etsy.com/sell?ref=hdr&from_page=https%3A%2F%2Fwww.etsy.com%2Fsearch" target="_blank">Sell on Etsy</a>
+						<a href="https://www.etsy.com/join?ref=hdr&from_page=https%3A%2F%2Fwww.etsy.com%2Fsearch" target="_blank">Register</a>
+						<button id="signInButton"><a href="https://www.etsy.com/signin?ref=hdr&from_action=signin-header&from_page=https%3A%2F%2Fwww.etsy.com%2Fsearch">Sign in</a></button>
+					</li>
+					<li id="discover">
+						<a href="https://www.etsy.com/discover?ref=hdr" target="_blank"><i class="fas fa-briefcase"></i> Discover</a>
+					</li>
+					<li>
+						<a href="https://www.etsy.com/cart?ref=hdr" target="_blank"><i class="fas fa-shopping-cart"></i> Cart</a>
+					</li>
+				</div>
+			</ul>
+		</section>
+
+		<!-- Navigation Bar -->
+
+		<section id="navBar">
+			<ul id=navList>
+				<li id="gifts"><i class="fas fa-gift"></i> Gifts</li>
+				<li id="jewelAndAccessories">Jewelry & Accessories</li>
+				<li id="apparel">Clothing & Shoes</li>
+				<li id="home">Home & Living</li>
+				<li id="weddingParty">Wedding & Party</li>
+				<li id="toysEntertain">Toys & Entertainment</li>
+				<li id="artCollectibles">Art & Collectibles</li>
+				<li id="craftSupplies">Craft Supplies</li>
+				<li id="vintage">Vintage</li>
+			</ul>
+		</section>
+		
+		<!-- Related Items Bar  -->
+
+		<section id="relatedItems">
+			<ul id="relatedItemsList">
+				<li class="related"></li>
+				<li class="related"></li>
+				<li class="related"></li>
+				<li class="related"></li>
+				<li class="related"></li>
+				<li class="related"></li>
+				<li class="related"></li>
+				<li class="related"></li>
+				<li class="related"></li>
+				<li class="related"></li>
+			</ul>
+		</section>
+
+		<!-- Main Display Section -->
+
+		<section id="merchandiseDisplay">
+
+			<!-- Left Hand Sort Options -->
+
+			<section id="sortOptions">
+				<div id="optionContainer">
+					<div id="firstOption">
+						<div id="specialOffers">
+							<h5 class="optionHeader">Special Offers</h5>
+							<input type="checkbox"> On Sale
+						</div>
+						<div id="allCategories">
+							<h5 class="optionHeader" id="allCategoriesHeader">All Categories</h5>
+							<ul>
+								<li>Home & Living</li>
+								<li>Art & Collectibles</li>
+								<li>Weddings</li>
+								<li>Clothing</li>
+							</ul>
+							<h6 class="showMore">+ Show More</h6>
+						</div>
+						<div id="shipping">
+							<h5 class="optionHeader" id="shippingHeader">Shipping</h5>
+							<ul>
+								<li><input type="checkbox">Free Shipping</li>
+								<li><input type="checkbox">Ready to ship in 1 business day</li>
+								<li><input type="checkbox">Ready to ship withing 3 business days</li>
+						</div>
+						<div>
+							<h5 class="optionHeader" id="materialHeader">Material</h5>
+							<ul>
+								<li><input type="checkbox">Ceramic</li>
+								<li><input type="checkbox">Cork</li>
+								<li><input type="checkbox">Fabric</li>
+								<li><input type="checkbox">Glass</li>
+								<li><input type="checkbox">Metal</li>
+							</ul>
+							<h6 class="showMore">+ Show More</h6>
+						</div>
+						<div>
+							<h5 class="optionHeader" id="colorHeader">Color</h5>
+							<ul>
+								<li><input type="checkbox">Beige</li>
+								<li><input type="checkbox">Black</li>
+								<li><input type="checkbox">Blue</li>
+								<li><input type="checkbox">Bronze</li>
+								<li><input type="checkbox">Brown</li>
+							</ul>
+							<h6 class="showMore">+ Show More</h6>
+						</div>
+						<div>
+							<h5 class="optionHeader" id="personalHeader">Can be personalized</h5>
+							<ul>
+								<li><input type="checkbox">Yes</li>
+								<li><input type="checkbox">No</li>
+							</ul>
+							<h6 class="showMore">+ Show More</h6>
+						</div>
+						<div>
+							<h5 class="optionHeader" id="occasionHeader">Material</h5>
+							<ul>
+								<li><input type="checkbox">Anniversary</li>
+								<li><input type="checkbox">Baby Shower</li>
+								<li><input type="checkbox">Bachelor party</li>
+								<li><input type="checkbox">Bachelorette party</li>
+								<li><input type="checkbox">Halloween</li>
+							</ul>
+							<h6 class="showMore">+ Show More</h6>
+						</div>
+						<div>
+							<h5 class="optionHeader" id="holidauHeader">Material</h5>
+							<ul>
+								<li><input type="checkbox">Ceramic</li>
+								<li><input type="checkbox">Cork</li>
+								<li><input type="checkbox">Fabric</li>
+								<li><input type="checkbox">Glass</li>
+								<li><input type="checkbox">Metal</li>
+							</ul>
+							<h6 class="showMore">+ Show More</h6>
+						</div>
+
+					</div>
+				</div>
+
+			</section>
+
+			<!-- Main Section - Displays merchandise -->
+
+			<section id="template">
+				
+			</section>
+		</section>
+
+		<!-- Footer Bar -->
+
+		<section id="footerBar">
+
+		</section>
+	</div>
+</body>
+</html>
