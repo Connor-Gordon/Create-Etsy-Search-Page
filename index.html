@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="styles.css"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link href="https://cdnjs.com/libraries/normalize">
 	<title>Document</title>
 </head>
 <body>
@@ -28,19 +29,32 @@
 					</li>
 				</div>
 				<div class="needToFlex">
-					<li id="etsyOptions">
+					<li id="adjustTopOptions">
 						<a href="https://www.etsy.com/sell?ref=hdr&from_page=https%3A%2F%2Fwww.etsy.com%2Fsearch" target="_blank">Sell on Etsy</a>
+					</li>
+					<li id="adjustTopOptions">
 						<a href="https://www.etsy.com/join?ref=hdr&from_page=https%3A%2F%2Fwww.etsy.com%2Fsearch" target="_blank">Register</a>
+					</li>
+					<li id="adjustTopOptions">
 						<button id="signInButton"><a href="https://www.etsy.com/signin?ref=hdr&from_action=signin-header&from_page=https%3A%2F%2Fwww.etsy.com%2Fsearch">Sign in</a></button>
 					</li>
 					<li id="discover">
-						<a href="https://www.etsy.com/discover?ref=hdr" target="_blank"><i class="fas fa-briefcase"></i> Discover</a>
+						<a href="https://www.etsy.com/discover?ref=hdr" target="_blank"><i class="fas fa-briefcase fa-2x"></i></br><span class="dc"> Discover</span></a>
 					</li>
-					<li>
-						<a href="https://www.etsy.com/cart?ref=hdr" target="_blank"><i class="fas fa-shopping-cart"></i> Cart</a>
+					<li id="cart">
+						<a href="https://www.etsy.com/cart?ref=hdr" target="_blank"><i class="fas fa-shopping-cart fa-2x"></i></br><span class="dc"> Cart</span></a>
 					</li>
 				</div>
 			</ul>
+		</section>
+
+		<!-- Search bar for media resizing -->
+
+		<section id="smallScreenSearch">
+			<div id="searchBarTwo">
+				<input type="text" name="searchInput" id="searchInput" placeholder="Search for items or shops">
+				<button type="submit" id="searchButton">Search</button>
+			</div>
 		</section>
 
 		<!-- Navigation Bar -->
@@ -62,18 +76,18 @@
 		<!-- Related Items Bar  -->
 
 		<section id="relatedItems">
-			<ul id="relatedItemsList">
-				<li class="related"></li>
-				<li class="related"></li>
-				<li class="related"></li>
-				<li class="related"></li>
-				<li class="related"></li>
-				<li class="related"></li>
-				<li class="related"></li>
-				<li class="related"></li>
-				<li class="related"></li>
-				<li class="related"></li>
-			</ul>
+			<div id="relatedItemsList">
+				<div class="related">whiskey decanter</div>
+				<div class="related">whiskey glasses</div>
+				<div class="related">whiskey barrel</div>
+				<div class="related">whiskey stones</div>
+				<div class="related">whiskey shirt</div>
+				<div class="related">whisky</div>
+				<div class="related">scotch</div>
+				<div class="related" id="onTheVerge">whiskey dispenser</div>
+				<div class="lessRelated">bourbon</div>
+				<div class="lessRelated">beer</div>
+			</div>
 		</section>
 
 		<!-- Main Display Section -->
@@ -82,16 +96,16 @@
 
 			<!-- Left Hand Sort Options -->
 
-			<section id="sortOptions">
+			<section id="sortOptionsContainer">
 				<div id="optionContainer">
-					<div id="firstOption">
-						<div id="specialOffers">
-							<h5 class="optionHeader">Special Offers</h5>
+					<div id="specialAndCategories">
+						<div class="sortOptions" id="specialOffers">
+							<span><strong>Special Offers</strong></span></br>
 							<input type="checkbox"> On Sale
 						</div>
-						<div id="allCategories">
+						<div class="sortOptions">
 							<h5 class="optionHeader" id="allCategoriesHeader">All Categories</h5>
-							<ul>
+							<ul class="listicles">
 								<li>Home & Living</li>
 								<li>Art & Collectibles</li>
 								<li>Weddings</li>
@@ -99,66 +113,122 @@
 							</ul>
 							<h6 class="showMore">+ Show More</h6>
 						</div>
-						<div id="shipping">
-							<h5 class="optionHeader" id="shippingHeader">Shipping</h5>
-							<ul>
-								<li><input type="checkbox">Free Shipping</li>
-								<li><input type="checkbox">Ready to ship in 1 business day</li>
-								<li><input type="checkbox">Ready to ship withing 3 business days</li>
-						</div>
-						<div>
-							<h5 class="optionHeader" id="materialHeader">Material</h5>
-							<ul>
-								<li><input type="checkbox">Ceramic</li>
-								<li><input type="checkbox">Cork</li>
-								<li><input type="checkbox">Fabric</li>
-								<li><input type="checkbox">Glass</li>
-								<li><input type="checkbox">Metal</li>
-							</ul>
-							<h6 class="showMore">+ Show More</h6>
-						</div>
-						<div>
-							<h5 class="optionHeader" id="colorHeader">Color</h5>
-							<ul>
-								<li><input type="checkbox">Beige</li>
-								<li><input type="checkbox">Black</li>
-								<li><input type="checkbox">Blue</li>
-								<li><input type="checkbox">Bronze</li>
-								<li><input type="checkbox">Brown</li>
-							</ul>
-							<h6 class="showMore">+ Show More</h6>
-						</div>
-						<div>
-							<h5 class="optionHeader" id="personalHeader">Can be personalized</h5>
-							<ul>
-								<li><input type="checkbox">Yes</li>
-								<li><input type="checkbox">No</li>
-							</ul>
-							<h6 class="showMore">+ Show More</h6>
-						</div>
-						<div>
-							<h5 class="optionHeader" id="occasionHeader">Material</h5>
-							<ul>
-								<li><input type="checkbox">Anniversary</li>
-								<li><input type="checkbox">Baby Shower</li>
-								<li><input type="checkbox">Bachelor party</li>
-								<li><input type="checkbox">Bachelorette party</li>
-								<li><input type="checkbox">Halloween</li>
-							</ul>
-							<h6 class="showMore">+ Show More</h6>
-						</div>
-						<div>
-							<h5 class="optionHeader" id="holidauHeader">Material</h5>
-							<ul>
-								<li><input type="checkbox">Ceramic</li>
-								<li><input type="checkbox">Cork</li>
-								<li><input type="checkbox">Fabric</li>
-								<li><input type="checkbox">Glass</li>
-								<li><input type="checkbox">Metal</li>
-							</ul>
-							<h6 class="showMore">+ Show More</h6>
-						</div>
-
+					</div>
+					<div class="sortOptions">
+						<h5 class="optionHeader" id="shippingHeader">Shipping</h5>
+						<ul class="listicles">
+							<li><input type="checkbox">Free Shipping</li>
+							<li><input type="checkbox">Ready to ship in 1 business day</li>
+							<li><input type="checkbox">Ready to ship within 3 business days</li>
+					</div>
+					<div class="sortOptions">
+						<h5 class="optionHeader" id="materialHeader">Material</h5>
+						<ul class="listicles">
+							<li><input type="checkbox">Ceramic</li>
+							<li><input type="checkbox">Cork</li>
+							<li><input type="checkbox">Fabric</li>
+							<li><input type="checkbox">Glass</li>
+							<li><input type="checkbox">Metal</li>
+						</ul>
+						<h6 class="showMore">+ Show More</h6>
+					</div>
+					<div class="sortOptions">
+						<h5 class="optionHeader" id="colorHeader">Color</h5>
+						<ul class="listicles">
+							<li><input type="checkbox">Beige</li>
+							<li><input type="checkbox">Black</li>
+							<li><input type="checkbox">Blue</li>
+							<li><input type="checkbox">Bronze</li>
+							<li><input type="checkbox">Brown</li>
+						</ul>
+						<h6 class="showMore">+ Show More</h6>
+					</div>
+					<div class="sortOptions">
+						<h5 class="optionHeader" id="personalHeader">Can be personalized</h5>
+						<ul class="listicles">
+							<li><input type="checkbox">Yes</li>
+							<li><input type="checkbox">No</li>
+						</ul>
+					</div>
+					<div class="sortOptions">
+						<h5 class="optionHeader" id="occasionHeader">Occasion</h5>
+						<ul class="listicles">
+							<li><input type="checkbox">Anniversary</li>
+							<li><input type="checkbox">Baby Shower</li>
+							<li><input type="checkbox">Bachelor party</li>
+							<li><input type="checkbox">Bachelorette party</li>
+							<li><input type="checkbox">Halloween</li>
+						</ul>
+						<h6 class="showMore">+ Show More</h6>
+					</div>
+					<div class="sortOptions">
+						<h5 class="optionHeader" id="holidayHeader">Holiday</h5>
+						<ul class="listicles">
+							<li><input type="checkbox">Christmas</li>
+							<li><input type="checkbox">Cinco de Mayo</li>
+							<li><input type="checkbox">Easter</li>
+							<li><input type="checkbox">Father's Day</li>
+							<li><input type="checkbox">Halloween</li>
+						</ul>
+						<h6 class="showMore">+ Show More</h6>
+					</div>
+					<div class="sortOptions">
+						<h5 class="optionHeader" id="shopLocationHeader">Shop location</h5>
+						<ul class="listicles">
+							<li><input type="radio">Anywhere</li>
+							<li><input type="radio">United States</li>
+							<li><input type="radio">Custom</li>
+							<li>
+								
+									<input type="text" placeholder="Enter location" id="locationBox">
+									<button type="submit" class="caret"><i class="fas fa-caret-right fa-2x"></i></button>
+								
+							</li>
+						</ul>
+					</div>
+					<div class="sortOptions">
+						<h5 class="optionHeader" id="itemTypeHeader">Item type</h5>
+						<ul class="listicles">
+							<li><input type="radio">All items</li>
+							<li><input type="radio">Handmade</li>
+							<li><input type="radio">Vintage</li>
+						</ul>
+					</div>
+					<div class="sortOptions">
+						<h5 class="optionHeader" id="priceHeader">Price ($)</h5>
+						<ul class="listicles">
+							<li><input type="radio">Any price</li>
+							<li><input type="radio">Under $25</li>
+							<li><input type="radio">$25-$50</li>
+							<li><input type="radio">$50-$100</li>
+							<li><input type="radio">Over $100</li>
+							<li><input type="radio">Custom</li>
+							
+							<li id="lowToHigh">
+								
+								<input type="text" placeholder="Low" class="customPriceBox"> to 
+								<input type="text" placeholder="High" class="customPriceBox">
+								<button type="submit" class="caret"><i class="fas fa-caret-right fa-2x"></i></button>
+								
+							</li>
+							
+						</ul>
+					</div>
+					<div class="sortOptions">
+						<h5 class="optionHeader" id="orderingOptionsHeader">Ordering options</h5>
+						<ul class="listicles">
+							<li><input type="checkbox">Accepts Etsy gift cards</li>
+							<li><input type="checkbox">Can be gift-wrapped</li>
+						</ul>
+					</div>
+					<div class="sortOptions">
+						<h5>Ship to</h5>
+						<select id="shipSelect">
+							<option value="United States">United States</option>
+							<option value="United States">Canada</option>
+							<option value="United States">Mexico</option>
+							<option value="United States">Outside of North America</option>
+						</select>
 					</div>
 				</div>
 
