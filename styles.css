@@ -224,12 +224,27 @@ h5 {
 }
 
 
+#theGoods {
+	width: 1000px;
+	border: 2px solid gray;
+}
 
 
+#merchandiseDisplay {
+	display: flex;
+}
 
+.templateDiv {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	padding: 15px;
+}
 
-
-
+.templateImage {
+	width: 250px;
+	height: 250px;
+}
 
 
 
@@ -313,6 +328,43 @@ h5 {
 	display: block;
 	margin-left: -85%;
 	border-left-style: none;
+}
+
+#smallScreenSearch {
+
+}
+
+
+#searchBarTwo {
+	display: flex;
+	min-width: 300px;
+	max-width: 595px;
+	border-bottom: 2px solid rgb(243,243,242);
+	font-size: 15px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#searchInput {
+	height: 34px;
+	min-width: 295px;
+	max-width: 495px;
+	border-radius: 3px 0px 0px 3px;
+	font-size: 15px;
+}
+
+
+#searchButton {
+	background-color: black;
+	border-style: none;
+	color: white;
+	font-size: 18px;
+	height: 34px;
+	width: 100px;
+	border-radius: 0px 3px 3px 0px;
+	position: relative;
+	top: 0;
+	right: 5px;
 }
 
 }
