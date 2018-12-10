@@ -47,6 +47,7 @@ h5 {
 	display: flex;
 	justify-content: space-between;
 	margin: 15px 0px;
+	padding: 0px 40px 0px 40px;
 }
 
 #etsyLogo {
@@ -91,7 +92,7 @@ h5 {
 
 #searchInput {
 	height: 34px;
-	width: 230px;
+	width: 350px;
 	border-radius: 3px 0px 0px 3px;
 	font-size: 15px;
 }
@@ -223,27 +224,57 @@ h5 {
 	display: none;
 }
 
-
-#theGoods {
-	width: 1000px;
-	border: 2px solid gray;
-}
-
-
-#merchandiseDisplay {
+#mainDisplay {
 	display: flex;
 }
 
-.templateDiv {
+#sortBar {
+	display: flex;
+	padding: 15px;
+	justify-content: space-between;
+}
+
+#templateDiv{
 	display: flex;
 	flex-wrap: wrap;
-	align-content: flex-start;
-	padding: 15px;
 }
 
-.templateImage {
-	width: 250px;
-	height: 250px;
+#templateContainer {
+	padding: 15px;
+	width: 295px;
+	height: 380px;
+	font-family: Georgia, san-serif
+	color: rgb(52,52,52);
+}
+
+.heart {
+	position: relative;
+}
+
+.templateImg {
+	width: 275px;
+	height: 220px;
+}
+
+.templateTitle {
+	font-size: 14px;
+	font-family: Arial, san-serif;
+	line-height: 1.5;
+	width: 275px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.templateSeller {
+	font-size: 12px;
+	color: rgb(105,105,105);
+}
+
+.templatePrice {
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 1.5;
 }
 
 
@@ -279,7 +310,7 @@ h5 {
 	margin-bottom: 10px;
 }
 
-#searchInput {
+#searchInputTwo {
 	height: 34px;
 	min-width: 495px;
 	max-width: 600px;
@@ -288,7 +319,7 @@ h5 {
 }
 
 
-#searchButton {
+#searchButtonTwo {
 	background-color: black;
 	border-style: none;
 	color: white;
@@ -330,8 +361,10 @@ h5 {
 	border-left-style: none;
 }
 
-#smallScreenSearch {
 
+#mainDisplay {
+	display: flex;
+	flex-direction: row-reverse;
 }
 
 
@@ -345,7 +378,7 @@ h5 {
 	margin-bottom: 10px;
 }
 
-#searchInput {
+#searchInputTwo {
 	height: 34px;
 	min-width: 295px;
 	max-width: 495px;
@@ -354,7 +387,7 @@ h5 {
 }
 
 
-#searchButton {
+#searchButtonTwo {
 	background-color: black;
 	border-style: none;
 	color: white;
@@ -368,3 +401,4 @@ h5 {
 }
 
 }
+

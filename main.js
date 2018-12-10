@@ -13,12 +13,12 @@ items.results.forEach(function(result){
 	// still dont know how to fix the url but w/o that issue the img would be ${result.Images[14]} or $(result.Images["url_570xN"])
 	
 	let	searchTemplate = 
-	`<div class="templateDiv">
+	`<div id="templateContainer">
 		<ul class="templateList">
-			<li><p class="templateimg"></p></li>
-			<li><p class="templateTitle"> ${result.title}</p></li>
-			<li><p class="templateSeller"> ${result.Shop.shop_name}</p></li>
-			<li><p class="templatePrice"> ${result.price}</p></li>
+			<li><img class="templateImg" src="${unescape(result.Images[0].url_570xN)}"/></li>
+			<li class="templateTitle"> ${result.title}</li>
+			<li class="templateSeller"> ${result.Shop.shop_name}</li>
+			<li class="templatePrice"> $${result.price}</li>
 		</ul>		
 	</div>`
 
