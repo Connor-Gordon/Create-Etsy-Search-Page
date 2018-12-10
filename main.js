@@ -1,7 +1,7 @@
 
 
 //let's set the variable "elements" to select the id templateDiv in html by looking in the document with query selector
-//                                  (\has to be id btw/)
+//                                  (\has to be id i think/)
 
 let elements = document.querySelector('#templateDiv')
 
@@ -10,7 +10,6 @@ let elements = document.querySelector('#templateDiv')
 items.results.forEach(function(result){
 
 	// let the variable "searchTemplate" equal our html template and for each ${}, get the corresponding value and fill it in
-	// still dont know how to fix the url but w/o that issue the img would be ${result.Images[14]} or $(result.Images["url_570xN"])
 	
 	let	searchTemplate = 
 	`<div id="templateContainer">
@@ -28,5 +27,7 @@ elements.innerHTML += searchTemplate
 })
 
 
+elements.addEventListener('mouseover', function(e){
+	e.target.innerHTML
 
-// unescape ??? ${result.Images[unescape(14)]} or $(result.Images[14 or "url_570xN"])
+})

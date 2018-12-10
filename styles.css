@@ -5,10 +5,11 @@ html {box-sizing:border-box;}
 
 body {
 	background-color: white;
-	font-family: Arial, san-serif;
-	font-weight: thin;
+	font-family: Helvetica, san-serif;
+	font-weight: lighter;
 	font-size: 12px;
 	color: rgb(31,31,31);
+	margin-left: 40px;
 }
 
 a {
@@ -37,6 +38,9 @@ h5 {
 	font-size: 12px;
 }
 
+
+
+
 /* Top bar */
 
 #topBar {
@@ -47,12 +51,45 @@ h5 {
 	display: flex;
 	justify-content: space-between;
 	margin: 15px 0px;
-	padding: 0px 40px 0px 40px;
 }
 
 #etsyLogo {
+	width: 75px;
+}
+
+#searchInput {
+	height: 34px;
+	width: 315px;
+	border-radius: 3px 0px 0px 3px;
+	font-size: 15px;
+	border-color: rgb(206,203,200);
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+}
+
+#searchInput:focus {
+	border-color: black;
+	outline: none;
+}
+
+
+#searchButton {
+	background-color: black;
+	border-style: none;
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+	height: 34px;
 	width: 80px;
-	margin-right: 15px;
+	border-radius: 0px 3px 3px 0px;
+	position: relative;
+	top: -1px;
+	right: 5px;
+}
+
+#searchButton:hover {
+	background-color: rgba(0,0,0,.8);
 }
 
 #signInButton {
@@ -71,6 +108,11 @@ h5 {
 	font-size: 15px;
 }
 
+#adjustTopOptions:hover {
+	text-decoration: underline;
+	color: rgb(102,102,102)
+}
+
 #discover, #cart {
 	border-left-style: solid;
 	border-left-width: 3px;
@@ -78,6 +120,7 @@ h5 {
 	text-align: center;
 	padding-left: 10px;
 	padding-right: 10px;
+	color: rgb(102,102,102);
 }
 
 .needToFlex, #navList, #relatedItemsList {
@@ -90,26 +133,7 @@ h5 {
 }
 
 
-#searchInput {
-	height: 34px;
-	width: 350px;
-	border-radius: 3px 0px 0px 3px;
-	font-size: 15px;
-}
 
-
-#searchButton {
-	background-color: black;
-	border-style: none;
-	color: white;
-	font-size: 18px;
-	height: 34px;
-	width: 100px;
-	border-radius: 0px 3px 3px 0px;
-	position: relative;
-	top: 0;
-	right: 5px;
-}
 
 /* Nav Bar */
 
@@ -120,10 +144,47 @@ h5 {
 }
 
 #navList li {
-	margin: -5px 10px 10px 10px;
-	max-width: 80px;
+	max-width: 160px;
+	margin: 0px 5px 10px 5px;
 	text-align: center;
 }
+
+/* Related Items Bar */
+
+.related, .lessRelated {
+	overflow: hidden;
+	border-radius: 5px;
+	border-style: solid;
+	border-color: rgb(217,138,75);
+	border-width: 1px;
+	font-size: 15px;
+	margin: 5px;
+	text-align: center;
+	padding: 0px 10px 0px 10px;
+	line-height: 34px;
+	height: 34px;
+}
+
+.related {
+	background-color: rgb(255,162,88);
+}
+
+.lessRelated {
+	background-color: rgb(254,200,121);
+}
+
+/* Main Display */
+
+#merchandiseDisplay {
+	margin: 5px;
+}
+
+#mainDisplay {
+	display: flex;
+}
+
+/* Sort Options */
+
 
 #specialOffers {
 	background-color: rgb(250,231,210);
@@ -138,38 +199,13 @@ h5 {
 	border-width: 2px;
 	border-color: rgb(243,243,242);
 	width: 230px;
+	height: 1900px;
 	display: flex;
 	text-align: justify;
 }
 
 .sortOptions {
 	border-bottom: 2px solid rgb(243,243,242);
-}
-
-.related, .lessRelated {
-	overflow: hidden;
-	border-radius: 5px;
-	border-style: solid;
-	border-color: rgb(217,138,75);
-	border-width: 1px;
-	font-size: 15px;
-	margin: 5px;
-	text-align: center;
-	padding: 0px 10px 0px 10px;
-	line-height: 40px;
-	height: 40px;
-}
-
-.related {
-	background-color: rgb(255,162,88);
-}
-
-.lessRelated {
-	background-color: rgb(254,200,121);
-}
-
-#merchandiseDisplay {
-	margin: 5px;
 }
 
 #optionContainer {
@@ -219,20 +255,20 @@ h5 {
 	margin-left: 20px;
 }
 
-
 #searchBarTwo {
 	display: none;
 }
 
-#mainDisplay {
-	display: flex;
-}
+/* Sort Bar above merchandise */
 
 #sortBar {
 	display: flex;
-	padding: 15px;
+	padding: 15px 15px 0px 15px;
 	justify-content: space-between;
+	margin-bottom: -15px;
 }
+
+/* Template */
 
 #templateDiv{
 	display: flex;
@@ -277,10 +313,44 @@ h5 {
 	line-height: 1.5;
 }
 
+/* Footer */
+
+#relatedFooter {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1000px;
+	margin-left: 250px;
+}
 
 
 
 
+
+
+/* Media from 900px-1200px */
+
+@media screen and (max-width: 1280px) {
+
+	#navList li {
+		max-width: 80px;
+	}
+
+	#etsyLogo {
+	width: 60px;
+	margin-right: 20px;
+	margin-left: 5px;
+	}
+
+	#topBarList {
+		justify-content: space-between;
+	}
+	
+	#relatedFooter {
+		margin-left: 150px;
+		max-width: 900px;
+	}
+
+}
 
 
 
@@ -291,45 +361,46 @@ h5 {
 @media screen and (max-width: 900px) {
 
 
-.lessRelated, .dc, #searchBar, #navBar {
-	display: none;
-}
+	.lessRelated, .dc, #searchBar, #navBar {
+		display: none;
+	}
 
-#discover, #cart {
-	display: block;
-	border-left-style: none;
-}
+	#discover, #cart {
+		display: block;
+		border-left-style: none;
+	}
 
-#searchBarTwo {
-	display: flex;
-	min-width: 600px;
-	max-width: 900px;
-	border-bottom: 2px solid rgb(243,243,242);
-	font-size: 15px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
+	#searchBarTwo {
+		display: flex;
+		min-width: 600px;
+		max-width: 900px;
+		border-bottom: 2px solid rgb(243,243,242);
+		font-size: 15px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
 
-#searchInputTwo {
-	height: 34px;
-	min-width: 495px;
-	max-width: 600px;
-	border-radius: 3px 0px 0px 3px;
-	font-size: 15px;
-}
+	#searchInputTwo {
+		height: 34px;
+		min-width: 495px;
+		max-width: 600px;
+		border-radius: 3px 0px 0px 3px;
+		font-size: 15px;
+	}
 
 
-#searchButtonTwo {
-	background-color: black;
-	border-style: none;
-	color: white;
-	font-size: 18px;
-	height: 34px;
-	width: 100px;
-	border-radius: 0px 3px 3px 0px;
-	position: relative;
-	top: 0;
-	right: 5px;
+	#searchButtonTwo {
+		background-color: black;
+		border-style: none;
+		color: white;
+		font-size: 18px;
+		height: 34px;
+		width: 100px;
+		border-radius: 0px 3px 3px 0px;
+		position: relative;
+		top: 0;
+		right: 5px;
+	}
 }
 
 
@@ -340,65 +411,70 @@ h5 {
 
 @media screen and (max-width: 600px) {
 
-#relatedItems, .dc, #navBar {
-	display: none;
-}
+	#relatedItems, .dc, #navBar {
+		display: none;
+	}
 
-#topBarList {
-	display: flex;
-	justify-content: flex-start;
-	margin: 15px 0px;
-}
+	#topBarList {
+		display: flex;
+		justify-content: flex-start;
+		margin: 15px 0px;
+	}
 
-.needToFlex, #navList, #relatedItemsList, #topBarList {
-	flex-direction: column;
-	flex-wrap: wrap;
-}
+	.needToFlex, #navList, #relatedItemsList, #topBarList {
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
 
-#discover, #cart {
-	display: block;
-	margin-left: -85%;
-	border-left-style: none;
-}
-
-
-#mainDisplay {
-	display: flex;
-	flex-direction: row-reverse;
-}
+	#discover, #cart {
+		display: block;
+		margin-left: -85%;
+		border-left-style: none;
+	}
 
 
-#searchBarTwo {
-	display: flex;
-	min-width: 300px;
-	max-width: 595px;
-	border-bottom: 2px solid rgb(243,243,242);
-	font-size: 15px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-
-#searchInputTwo {
-	height: 34px;
-	min-width: 295px;
-	max-width: 495px;
-	border-radius: 3px 0px 0px 3px;
-	font-size: 15px;
-}
+	#mainDisplay {
+		display: flex;
+		flex-direction: row-reverse;
+	}
 
 
-#searchButtonTwo {
-	background-color: black;
-	border-style: none;
-	color: white;
-	font-size: 18px;
-	height: 34px;
-	width: 100px;
-	border-radius: 0px 3px 3px 0px;
-	position: relative;
-	top: 0;
-	right: 5px;
-}
+	#searchBarTwo {
+		display: flex;
+		min-width: 300px;
+		max-width: 595px;
+		border-bottom: 2px solid rgb(243,243,242);
+		font-size: 15px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	#searchInputTwo {
+		height: 34px;
+		min-width: 295px;
+		max-width: 495px;
+		border-radius: 3px 0px 0px 3px;
+		font-size: 15px;
+	}
+
+
+	#searchButtonTwo {
+		background-color: black;
+		border-style: none;
+		color: white;
+		font-size: 18px;
+		height: 34px;
+		width: 100px;
+		border-radius: 0px 3px 3px 0px;
+		position: relative;
+		top: 0;
+		right: 5px;
+	}
+
+	#relatedFooter {
+		margin-left: 0px;
+		max-width: 600px;
+	}
 
 }
 
